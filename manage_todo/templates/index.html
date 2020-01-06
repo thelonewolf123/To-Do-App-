@@ -14,8 +14,7 @@
     <nav class="navbar navbar-dark bg-dark">
         <a class="navbar navbar-brand" style="color: white;">To Do App</a>
     </nav>
-    <div class="row m-2">
-        <div class="col">
+    <div class="container mt-4">
             <form action="{% url 'add' %}" class="form-inline">
                 <input class="form-control mb-2 mr-sm-2" type="text" name="text" id="" placeholder="Add item...">
                 <button class="btn btn-primary mb-2" type="submit">
@@ -23,14 +22,11 @@
                 </button>
             </form>
         </div>
-    </div>
-
-    <div class="row">
-        <div class="col mr-4 ml-4">
+        <div class="container pt-4">
             <ul class="list-group">
                 {% for item in todo %}
                 <li class="list-group-item">
-                    {{ item.text }}
+                            {{ item.text }}
                     <div class="float-right">
                         <a href="{% url 'delete' item.id %}">
                             <button class="btn btn-danger m-0">Delete</button>
@@ -40,15 +36,13 @@
                 {% endfor %}
             </ul>
         </div>
-    </div>
     <div style="height: 100px;">
     </div>
-    <div class="footer content-center text-center pt-4 bg-dark" style="height:5rem; color:white;">
+    <div class="footer content-center text-center bg-dark" style="height:4rem; color:white;">
+        <div style="height:1.5rem;"></div>
         <div class="container text-center">
             &copy; To Do App | github.io
         </div>
     </div>
-
 </body>
-
 </html>
